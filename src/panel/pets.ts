@@ -7,6 +7,7 @@ import { Crab } from './pets/crab';
 import { Dog } from './pets/dog';
 import { Fox } from './pets/fox';
 import { Mod } from './pets/mod';
+import { Toothless } from './pets/toothless';
 import { Rocky } from './pets/rocky';
 import { RubberDuck } from './pets/rubberduck';
 import { Snake } from './pets/snake';
@@ -173,6 +174,19 @@ export function createPet(
         string,
     ] = [el, collision, speech, size, left, bottom, petRoot, floor, name];
 
+    const toothlessPetArguments: [
+        HTMLImageElement,
+        HTMLDivElement,
+        HTMLDivElement,
+        PetSize,
+        number,
+        number,
+        string,
+        number,
+        string,
+    ] = [el, collision, speech, PetSize.huge, left, bottom, petRoot, floor, name];
+
+
     switch (petType) {
         case PetType.cat:
             return new Cat(...standardPetArguments, PetSpeed.normal);
@@ -204,6 +218,8 @@ export function createPet(
             return new Rat(...standardPetArguments, PetSpeed.normal);
         case PetType.turtle:
             return new Turtle(...standardPetArguments, PetSpeed.verySlow);
+        case PetType.toothless:
+            return new Toothless(...toothlessPetArguments, PetSpeed.normal);
         default:
             throw new InvalidPetException("Pet type doesn't exist");
     }
@@ -241,6 +257,9 @@ export function availableColors(petType: PetType): PetColor[] {
             return Rat.possibleColors;
         case PetType.turtle:
             return Turtle.possibleColors;
+        case PetType.toothless:
+            return Toothless.possibleColors;
+
         default:
             throw new InvalidPetException("Pet type doesn't exist");
     }

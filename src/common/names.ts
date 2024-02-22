@@ -1,4 +1,5 @@
 import { CAT_NAMES } from '../panel/pets/cat';
+import { TOOTHLESS_NAMES } from '../panel/pets/toothless';
 import { CHICKEN_NAMES } from '../panel/pets/chicken';
 import { CLIPPY_NAMES } from '../panel/pets/clippy';
 import { COCKATIEL_NAMES } from '../panel/pets/cockatiel';
@@ -31,6 +32,7 @@ export function randomName(type: PetType): string {
                 [PetType.rubberduck]: DUCK_NAMES,
                 [PetType.zappy]: ZAPPY_NAMES,
                 [PetType.rocky]: ROCKY_NAMES,
+                [PetType.toothless]: TOOTHLESS_NAMES,
                 [PetType.cockatiel]: COCKATIEL_NAMES,
                 [PetType.rat]: RAT_NAMES,
                 [PetType.turtle]: TURTLE_NAMES,
