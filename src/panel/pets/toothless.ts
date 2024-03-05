@@ -7,6 +7,7 @@ export class Toothless extends BasePetType {
     static possibleColors = [
         PetColor.black
     ];
+    
     sequence = {
         startingState: States.sitIdle,
         sequenceStates: [

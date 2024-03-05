@@ -26,11 +26,11 @@ export const enum PetType {
     rocky = 'rocky',
     rubberduck = 'rubber-duck',
     snake = 'snake',
+    toothless = 'toothless',
     totoro = 'totoro',
     turtle = 'turtle',
     zappy = 'zappy',
     null = 'null',
-    toothless = 'toothless',
 }
 
 export const enum PetSpeed {
@@ -92,9 +92,9 @@ export const ALL_PETS = [
     PetType.rubberduck,
     PetType.snake,
     PetType.totoro,
+    PetType.toothless,
     PetType.turtle,
     PetType.zappy,
-    PetType.toothless,
 ];
 export const ALL_COLORS = [
     PetColor.black,
